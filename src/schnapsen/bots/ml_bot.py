@@ -26,6 +26,8 @@ class MLPlayingBot(Bot):
         self.__model = joblib.load(model_location)
 
     def get_move(self, perspective: PlayerPerspective, leader_move: Optional[Move]) -> Move:
+        
+        
         # get the sate feature representation
         state_representation = get_state_feature_vector(perspective)
         # get the leader's move representation, even if it is None
@@ -37,7 +39,7 @@ class MLPlayingBot(Bot):
         for my_move in my_valid_moves:
             my_move_representations.append(get_move_feature_vector(my_move))
 
-        # create all model inputs, for all bot's valid moves
+        # create all model inputs, for all bot's valid movesf
         action_state_representations: list[list[int]] = []
 
         if perspective.am_i_leader():

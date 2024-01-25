@@ -1,8 +1,9 @@
 import random
 from unittest import TestCase
-from schnapsen.bots import RandBot, RdeepBot
+from schnapsen.bots import RandBot, RdeepBot, ObserverBot
 from schnapsen.game import SchnapsenGamePlayEngine
 from typing import List, Dict
+# from schnapsen.executables import Any
 
 
 
@@ -49,7 +50,8 @@ bot3 = RdeepBot(3,2,rand=random.Random(44), name="RdeepBot")
 myrepeats = 10
 bots = [bot1, bot2, bot3]
 engine = SchnapsenGamePlayEngine()
-perspective = PlayerPerspective()
+# perspective = PlayerPerspective()
 
 # Create test matches
-test_tournament(bots, myrepeats, engine)
+# test_tournament(bots, myrepeats, engine)
+# try_bot_game()

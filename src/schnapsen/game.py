@@ -2143,7 +2143,7 @@ class GamePlayEngine:
         if winner:
             winner_state = WinnerPerspective(game_state_copy, self)
             winner.implementation.notify_game_end(won=True, perspective=winner_state)
-
+            
             loser_state = LoserPerspective(game_state_copy, self)
             game_state_copy.follower.implementation.notify_game_end(False, perspective=loser_state)
 
